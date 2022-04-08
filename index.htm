@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Facilities</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+    	 <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@2.5.0/dist/esri-leaflet.js"
+    integrity="sha512-ucw7Grpc+iEQZa711gcjgMBnmd9qju1CICsRaryvX7HJklK0pGl/prxKvtHwpgm5ZHdvAil7YPxI1oWPOWK3UQ=="
+    crossorigin=""></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="dist/MarkerCluster.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <h2>Kenya Health Facilities</h2>
+
+    <div id="tables" >
+        <div id="control-frame">
+            <header>
+                <h3 class="text-center">Kenya Population</h3><hr>
+                <div id="selected">
+                    <div class="alert alert-success">
+                        Select a Feature to Display Statistics
+                    </div>
+                </div>
+            </header>
+            <br>
+            <div id="control-frame2">
+                <header>
+                    <h3 class="text-center">Kenya Health Facilities</h3><hr>
+                    <div id="selected2">
+                        <div class="alert alert-success">
+                            Select a Feature to Display Statistics
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <!-- <div id="basemaps-wrapper" class="leaflet-bar">
+        <select name="basemaps" id="basemaps">
+          <option value="Topographic">Topographic<options>
+          <option value="Streets">Streets</option>
+          <option value="NationalGeographic">National Geographic<options>
+          <option value="Oceans">Oceans<options>
+          <option value="Gray">Gray<options>
+          <option value="DarkGray">Dark Gray<options>
+          <option value="Imagery">Imagery<options>
+          <option value="ShadedRelief">Shaded Relief<options>
+        </select>
+    </div> -->
+      
+</div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtC92XFlo81eyoV8FDwHw-rQHZCBubwKI&callback=initMap"
+type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+<script src="dist/leaflet.markercluster.js"></script>
+<script src="kenya_health.geojson"></script>
+<script src="kenya_counties.geojson"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
